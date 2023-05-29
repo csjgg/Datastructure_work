@@ -221,7 +221,7 @@ int main(void) {
         if (statuss == OK) {
           printf("已存入\n");
         } else {
-          printf("线性表不存在\n");
+          printf("二叉树不存在\n");
         }
         getchar();
         getchar();
@@ -241,9 +241,9 @@ int main(void) {
         break;
       case 18:
         // 切换BiTree
-        printf("输入要切换到的线性表的序号：[0-29]");
+        printf("输入要切换到的二叉树的序号：[0-29]");
         scanf("%d", &num);
-        printf("已切换到第%d个线性表\n", num);
+        printf("已切换到第%d个二叉树\n", num);
         list[num] = NULL;
         getchar();
         getchar();
