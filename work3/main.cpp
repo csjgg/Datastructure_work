@@ -244,7 +244,7 @@ int main(void) {
         printf("输入要切换到的二叉树的序号：[0-29]");
         scanf("%d", &num);
         printf("已切换到第%d个二叉树\n", num);
-        list[num] = NULL;
+        //list[num] = NULL;
         getchar();
         getchar();
         break;
