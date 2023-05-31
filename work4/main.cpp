@@ -27,12 +27,12 @@ int main() {
             int ans, i = 0;
             printf("请输入顶点数据【以-1为结尾】：");
             do {  // 输入顶点数据
-              scanf("%d%s", &V[i].key, V[i].others);
+              scanf("%d %s", &V[i].key, V[i].others);
             } while (V[i++].key != -1);
             printf("请输入弧数据【以-1为结尾】：");
             i = 0;
             do {  // 输入弧的数据
-              scanf("%d%d", &VR[i][0], &VR[i][1]);
+              scanf("%d %d", &VR[i][0], &VR[i][1]);
             } while (VR[i++][0] != -1);
             ans = CreateCraph(G, V, VR);  // 创建无向图
             if (ans == OK) {
@@ -54,7 +54,7 @@ int main() {
             printf("无向图图存在，无法创建！\n");
           getchar();
           getchar();
-          system("cls");
+          
           break;
         }
         case 2: {  // 销毁图
@@ -65,7 +65,6 @@ int main() {
             printf("无向图为空，无需销毁！\n");
           getchar();
           getchar();
-          system("cls");
           break;
         }
         case 3: {  // 查找顶点
@@ -83,7 +82,6 @@ int main() {
             printf("无向图为空，查找失败！\n");
           getchar();
           getchar();
-          system("cls");
           break;
         }
         case 4: {  // 顶点赋值
@@ -107,7 +105,6 @@ int main() {
             printf("无向图图为空，赋值操作失败！\n");
           getchar();
           getchar();
-          system("cls");
           break;
         }
         case 5: {  // 获得第一邻接点
@@ -125,7 +122,6 @@ int main() {
             printf("无向图为空！\n");
           getchar();
           getchar();
-          system("cls");
           break;
         }
         case 6: {  // 获得下一邻接点
@@ -144,7 +140,6 @@ int main() {
             printf("无向图为空，获取失败！\n");
           getchar();
           getchar();
-          system("cls");
           break;
         }
         case 7: {  // 插入顶点
@@ -173,7 +168,6 @@ int main() {
             printf("无向图为空，请先创建图！\n");
           getchar();
           getchar();
-          system("cls");
           break;
         }
         case 8: {  // 删除顶点
@@ -201,7 +195,6 @@ int main() {
             printf("图为空，删除操作失败！\n");
           getchar();
           getchar();
-          system("cls");
           break;
         }
         case 9: {  // 添加弧
@@ -229,7 +222,6 @@ int main() {
             printf("无向图为空，请先创建图！\n");
           getchar();
           getchar();
-          system("cls");
           break;
         }
         case 10: {  // 删除弧
@@ -257,7 +249,6 @@ int main() {
             printf("图为空，删除操作失败！\n");
           getchar();
           getchar();
-          system("cls");
           break;
         }
         case 11: {  // 深度遍历
@@ -269,7 +260,6 @@ int main() {
             printf("无向图不存在！遍历为空！\n");
           getchar();
           getchar();
-          system("cls");
           break;
         }
         case 12: {  // 广度遍历
@@ -281,7 +271,7 @@ int main() {
             printf("无向图不存在！遍历为空！\n");
           getchar();
           getchar();
-          system("cls");
+          
           break;
         }
         case 13: {  // 文件保存
@@ -295,7 +285,7 @@ int main() {
             printf("图为空，保存失败！\n");
           getchar();
           getchar();
-          system("cls");
+          
           break;
         }
         case 14: {  // 文件读取
@@ -309,7 +299,7 @@ int main() {
             printf("图不为空，无法读取文件！\n");
           getchar();
           getchar();
-          system("cls");
+          
           break;
         }
         case 15: {  // 查找与顶点距离小于K的顶点
@@ -323,7 +313,7 @@ int main() {
             printf("无向图为空!\n");
           getchar();
           getchar();
-          system("cls");
+          
           break;
         }
         case 16: {  // 输出两个顶点的最短路径
@@ -337,7 +327,7 @@ int main() {
             printf("无向图为空!\n");
           getchar();
           getchar();
-          system("cls");
+          
           break;
         }
         case 17: {  // 求图的连通分量
@@ -348,14 +338,14 @@ int main() {
             printf("无向图为空!\n");
           getchar();
           getchar();
-          system("cls");
+          
           break;
         }
         default: {
           printf("输入错误，请重新输入！\n");
           getchar();
           getchar();
-          system("cls");
+          
         }
       }
       print1();
@@ -383,12 +373,12 @@ int main() {
           int ans, i = 0;
           printf("请输入顶点数据【以-1为结尾】：");
           do {
-            scanf("%d%s", &V[i].key, V[i].others);
+            scanf("%d %s", &V[i].key, V[i].others);
           } while (V[i++].key != -1);
           printf("请输入弧数据【以-1为结尾】：");
           i = 0;
           do {
-            scanf("%d%d", &VR[i][0], &VR[i][1]);
+            scanf("%d %d", &VR[i][0], &VR[i][1]);
           } while (VR[i++][0] != -1);
           ans = CreateCraph(Lists.elem[Lists.length].G, V, VR);
           if (ans == OK) {
@@ -399,7 +389,7 @@ int main() {
             printf("创建失败！\n");
           getchar();
           getchar();
-          system("cls");
+          
           break;
         }
         case 2: {  // 移除某图
@@ -411,7 +401,7 @@ int main() {
             printf("删除成功！\n");
           getchar();
           getchar();
-          system("cls");
+          
           break;
         }
         case 3: {  // 查找某图
@@ -421,7 +411,7 @@ int main() {
             printf("无该名的无向图！\n");
             getchar();
             getchar();
-            system("cls");
+            
             break;
           }  // 调用查找树的函数
           printf("查找成功：%s \n", saveName);
@@ -435,7 +425,7 @@ int main() {
           }
           getchar();
           getchar();
-          system("cls");
+          
           break;
         }
         case 4: {  // 单独操作
@@ -445,7 +435,7 @@ int main() {
             printf("无该名称的无向图！\n");
             getchar();
             getchar();
-            system("cls");
+            
             break;
           }  // 三级菜单
           printf(
@@ -468,12 +458,12 @@ int main() {
                   int ans, i = 0;
                   printf("请输入结点数据【以-1为结尾】：");
                   do {
-                    scanf("%d%s", &V[i].key, V[i].others);
+                    scanf("%d %s", &V[i].key, V[i].others);
                   } while (V[i++].key != -1);
                   printf("请输入弧数据【以-1为结尾】：");
                   i = 0;
                   do {
-                    scanf("%d%d", &VR[i][0], &VR[i][1]);
+                    scanf("%d %d", &VR[i][0], &VR[i][1]);
                   } while (VR[i++][0] != -1);
                   ans = CreateCraph(Lists.elem[number - 1].G, V, VR);
                   if (ans == OK) {
@@ -497,7 +487,7 @@ int main() {
                   printf("无向图图存在，无法创建！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 2: {  // 销毁图
@@ -508,7 +498,7 @@ int main() {
                   printf("无向图为空，无需销毁！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 3: {  // 查找顶点
@@ -528,7 +518,7 @@ int main() {
                   printf("无向图为空，查找失败！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 4: {  // 顶点赋值
@@ -553,7 +543,7 @@ int main() {
                   printf("无向图图为空，赋值操作失败！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 5: {  // 获得第一邻接点
@@ -573,7 +563,7 @@ int main() {
                   printf("无向图为空！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 6: {  // 获得下一邻接点
@@ -594,7 +584,7 @@ int main() {
                   printf("无向图为空，获取失败！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 7: {  // 插入顶点
@@ -626,7 +616,7 @@ int main() {
                   printf("无向图为空，请先创建图！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 8: {  // 删除顶点
@@ -657,7 +647,7 @@ int main() {
                   printf("图为空，删除操作失败！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 9: {  // 添加弧
@@ -688,7 +678,7 @@ int main() {
                   printf("无向图为空，请先创建图！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 10: {  // 删除弧
@@ -719,7 +709,7 @@ int main() {
                   printf("图为空，删除操作失败！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 11: {  // 深度遍历
@@ -732,7 +722,7 @@ int main() {
                   printf("遍历为空！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 12: {  // 广度遍历
@@ -745,7 +735,7 @@ int main() {
                   printf("遍历为空！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 13: {  // 文件保存
@@ -759,7 +749,7 @@ int main() {
                   printf("图为空，保存失败！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 14: {  // 文件读取
@@ -773,7 +763,7 @@ int main() {
                   printf("图不为空，无法读取文件！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 15: {  // 查找与顶点距离小于k的顶点
@@ -789,7 +779,7 @@ int main() {
                   printf("无向图为空!\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 16: {  // 计算两个顶点的最短路径
@@ -816,11 +806,11 @@ int main() {
                   printf("无向图为空!\n");
                 getchar();
                 getchar();
-                system("cls");
+                
                 break;
               }
               case 18: {
-                system("cls");
+                
                 goto A;
                 break;
               }
@@ -828,7 +818,7 @@ int main() {
                 printf("输入错误，请重新输入！\n");
                 getchar();
                 getchar();
-                system("cls");
+                
               }
             }
             print2();
@@ -840,7 +830,7 @@ int main() {
             printf("多图无数据！\n");
             getchar();
             getchar();
-            system("cls");
+            
             break;
           }
           int i;
@@ -857,7 +847,7 @@ int main() {
           }
           getchar();
           getchar();
-          system("cls");
+          
           break;
         }
         case 6: {  // 清空多图
@@ -865,21 +855,21 @@ int main() {
             printf("多图已为空！！\n");
             getchar();
             getchar();
-            system("cls");
+            
             break;
           }
           Lists.length = 0;
           printf("清空成功！\n");
           getchar();
           getchar();
-          system("cls");
+          
           break;
         }
         default: {
           printf("输入错误，请重新输入！\n");
           getchar();
           getchar();
-          system("cls");
+          
         }
       }
       print3();
